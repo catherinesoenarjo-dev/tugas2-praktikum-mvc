@@ -1,0 +1,15 @@
+<%- include('../partials/header', { pageTitle: 'Beranda - Perpustakaan Digital' }) %>
+<section class="card">
+ <!-- Menangkap data userName dari server -->
+    <p class="card-title">Halo, <%= userName %>!</p>
+    <h1 class="card-text">Selamat datang di Perpustakaan Digital kami!</h1>
+    <h2 class="card-subtitle">Tersedia 24 jam untuk seluruh pengguna</h2>
+    <p class="card-text">Fitur yang tersedia di website ini sebagai berikut:</p>
+    <ul class="card-list">
+        <% fiturList.forEach(fitur => { %>
+        <li><strong><%= fitur %></strong></li>
+        <% }) %>
+    </ul>
+</section>
+<!-- Memanggil partial footer -->
+<%- include('../partials/footer') %>

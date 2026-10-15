@@ -1,0 +1,33 @@
+<%- include('../partials/header', { pageTitle: 'Tambah Buku - Perpustakaan Digital' }) %>
+
+<section class="card">
+  <h1 class="card-title">Form Tambah Koleksi</h1>
+  <!-- Formulir mengirim data melalui metode HTTP POST -->
+  <form action="/form/tambah" method="POST">
+    <section class="form-group">
+      <label for="judul">Judul:</label>
+      <input type="text" id="judul" name="judul" required>
+    </section>
+    <section class="form-group">
+      <label for="penulis">Penulis:</label>
+      <input type="text" id="penulis" name="penulis" required>
+    </section>
+    <section class="form-group">
+      <label for="tahun">Tahun Terbit:</label>
+      <input type="number" id="tahun" name="tahun" min="1000" max="2100" required>
+    </section>
+    <section class="form-group">
+      <label for="kategori">Kategori:</label>
+      <select id="kategori" name="kategori" class="kategori" required>
+        <option class="form-control" value="">-- Pilih Kategori --</option>
+        <option value="Sastra">Sastra</option>
+        <option value="E-journal">E-journal</option>
+        <option value="Preprint">Preprint</option>
+        <option value="Conference Paper">Conference Paper</option>
+      </select>
+    </section>
+    <button class="btn-submit" type="submit">Tambah Koleksi</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,27 @@
+<%- include('../partials/header', { pageTitle: 'Katalog Koleksi - Perpustakaan Digital' }) %>
+
+<section class="card">
+  <h1 class="card-title">Katalog Koleksi Perpustakaan</h1>
+  <table class="card-table">
+    <thead class="table-head">
+      <tr class="table-head-row">
+        <th class="table-cell">Judul</th>
+        <th class="table-cell">Penulis</th>
+        <th class="table-cell">Tahun</th>
+        <th class="table-cell">Kategori</th>
+      </tr>
+    </thead>
+    <tbody class="table-body">
+      <% daftarBuku.forEach((buku, index) => { %>
+        <tr class="table-row">
+          <td class="table-cell"><%= buku.judul %></td>
+          <td class="table-cell"><%= buku.penulis %></td>
+          <td class="table-cell"><%= buku.tahun %></td>
+          <td class="table-cell"><%= buku.kategori %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+
+<%- include('../partials/footer') %>
